@@ -27,3 +27,6 @@ push:
 	git add .
 	git commit -a -m 'auto commit'
 	git push origin master
+
+build-html: html
+	cp -vrf _build/html/* ./docs/
