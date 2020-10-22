@@ -1,8 +1,9 @@
 name: "Pull Request build Docs"
 on:
   push
-    branches:
-      - main
+  branches:
+    - feature/0.0.1
+
 #https://github.com/ammaraskar/sphinx-action
 jobs:
   docs:
@@ -16,6 +17,9 @@ jobs:
       - name: "pip install"
         run: pip install -r requirements.txt
         id: pip
-      - name: "push docs"
+      - name: "build docs"
         run: make build-html
         id: build-html
+      - name: "push docs"
+        run: make publish
+        id: publish

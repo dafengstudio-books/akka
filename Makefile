@@ -33,9 +33,11 @@ build-html: html
 	git add docs/*
 	git commit -a -m 'auto publish'
 	cd docs;make html
-	rm -vrf docs/open-video-middle-platform.github.io|true
-	mkdir -p docs/open-video-middle-platform.github.io
-	git clone https://yishenggudou:78a8f13f5d9d28bc5af48a8b33b77be4ee76a9a7@github.com/open-video-middle-platform/open-video-middle-platform.github.io.git docs/open-video-middle-platform.github.io
-	cp -vrf docs/_build/* docs/open-video-middle-platform.github.io/
-	cd docs/open-video-middle-platform.github.io;git config user.name yishenggudou;git config user.email yishenggudou@gmail.com
-	cd docs/open-video-middle-platform.github.io;git add * -f ;git commit -a -m 'auto build by github action'; git push origin
+
+publish:
+	rm -vrf dafengstudio-books.akka-book|true
+	mkdir -p dafengstudio-books.akka-book
+	git clone https://yishenggudou:78a8f13f5d9d28bc5af48a8b33b77be4ee76a9a7@github.com/dafengstudio-books/akka-book.git dafengstudio-books.akka-book
+	cp -vrf docs/* dafengstudio-books.akka-book/docs/
+	cd dafengstudio-books.akka-book;git config user.name yishenggudou;git config user.email yishenggudou@gmail.com
+	cd dafengstudio-books.akka-book;git add docs/* -f ;git commit -a -m 'auto build by github action'; git push origin
