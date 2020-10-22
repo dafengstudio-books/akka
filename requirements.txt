@@ -17,5 +17,4 @@ IPython
 numpydoc
 sphinx==3.1
 rstcheck==3.3.1
-sphinxcontrib-httpdomain
 graphviz==0.14
