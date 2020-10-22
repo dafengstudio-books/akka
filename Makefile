@@ -32,7 +32,8 @@ publish:
 	git clone https://yishenggudou:${token}@github.com/dafengstudio-books/akka-book.git dafengstudio-books.akka-book
 	cp -vrf _build/html/* dafengstudio-books.akka-book/docs/
 	cd dafengstudio-books.akka-book;git config user.name yishenggudou;git config user.email yishenggudou@gmail.com
-	cd dafengstudio-books.akka-book;git add docs/* -f ;git commit -a -m 'auto build by github action'; git push origin
+	cd dafengstudio-books.akka-book;git add docs/* -f ;git commit -a -m 'auto build by github action';
+	cd dafengstudio-books.akka-book;git push origin
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
