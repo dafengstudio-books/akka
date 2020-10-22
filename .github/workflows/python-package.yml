@@ -1,6 +1,6 @@
 name: "Pull Request build Docs"
 on:
-  push
+  push:
     branches:
       - feature/0.0.1
 
