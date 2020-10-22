@@ -1,8 +1,8 @@
 name: "Pull Request build Docs"
 on:
   push
-  branches:
-    - feature/0.0.1
+    branches:
+      - feature/0.0.1
 
 #https://github.com/ammaraskar/sphinx-action
 jobs:
