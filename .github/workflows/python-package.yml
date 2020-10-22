@@ -1,5 +1,8 @@
 name: "Pull Request build Docs"
-on: push
+on:
+  push
+    branches:
+      - main
 #https://github.com/ammaraskar/sphinx-action
 jobs:
   docs:
