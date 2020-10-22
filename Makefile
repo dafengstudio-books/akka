@@ -30,3 +30,5 @@ push:
 
 build-html: html
 	cp -vrf _build/html/* ./docs/
+	git add docs/*
+	git commit -a -m 'auto publish'
