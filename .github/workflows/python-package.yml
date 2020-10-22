@@ -14,5 +14,5 @@ jobs:
         run: pip install -r requirements.txt
         id: pip
       - name: "push docs"
-        run: make push-doc
-        id: push-docs
+        run: make build-html
+        id: build-html
