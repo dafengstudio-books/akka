@@ -18,7 +18,7 @@ jobs:
         run: pip install -r requirements.txt
         id: pip
       - name: "build docs"
-        run: make build-html
+        run: make html
         id: build-html
       - name: "push docs"
         run: make publish token=${{ secrets.token }}
