@@ -64,7 +64,7 @@ source_parsers = {
 }
 
 # The master toctree document.
-master_doc = 'docs/index'
+master_doc = 'index'
 
 # General information about the project.
 project = u'AKKA 架构源码分析'
@@ -239,7 +239,7 @@ latex_elements['preamble'] = r"""
 \renewcommand\familydefault{\ttdefault}
 \renewcommand\CJKfamilydefault{\CJKrmdefault}
 """
-latex_logo = 'docs/_static/logo.png'
+latex_logo = '/_static/logo.png'
 latex_show_urls = 'footnote'
 
 latex_appendices = ['docs/glossary']
