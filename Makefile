@@ -28,16 +28,11 @@ push:
 	git commit -a -m 'auto commit'
 	git push origin master
 
-build-html: html
-	cp -vrf _build/html/* ./docs/
-	git add docs/*
-	git commit -a -m 'auto publish'
-	cd docs;make html
 
 publish:
 	rm -vrf dafengstudio-books.akka-book|true
 	mkdir -p dafengstudio-books.akka-book
 	git clone https://yishenggudou:${token}@github.com/dafengstudio-books/akka-book.git dafengstudio-books.akka-book
-	cp -vrf docs/* dafengstudio-books.akka-book/docs/
+	cp -vrf _build/html/* dafengstudio-books.akka-book/docs/
 	cd dafengstudio-books.akka-book;git config user.name yishenggudou;git config user.email yishenggudou@gmail.com
 	cd dafengstudio-books.akka-book;git add docs/* -f ;git commit -a -m 'auto build by github action'; git push origin
