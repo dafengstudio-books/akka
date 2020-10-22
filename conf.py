@@ -23,9 +23,10 @@ import sys
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 os.environ["PATH"] = "{0}:{1}".format(PROJECT_DIR, os.environ["PATH"])
+PROJECT_DOCS_DIR = os.path.join(PROJECT_DIR,'docs')
 
 sys.path.insert(0, os.path.abspath('..'))
-src_paths = [PROJECT_DIR, ]
+src_paths = [PROJECT_DIR, PROJECT_DOCS_DIR]
 # -- General configuration ---------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -40,7 +41,7 @@ extensions = [
     'sphinx.ext.graphviz',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
-    "sphinxcontrib.httpdomain",
+   # "sphinxcontrib.httpdomain",
     # 'matplotlib.sphinxext.only_directives',
     'matplotlib.sphinxext.plot_directive',
     'IPython.sphinxext.ipython_directive',
@@ -63,7 +64,7 @@ source_parsers = {
 }
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'docs/index'
 
 # General information about the project.
 project = u'AKKA 架构源码分析'
@@ -162,7 +163,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'AKKA 架构源码分析',
-     u'Oms常见的应急手册',
+     u'AKKA 架构源码分析',
      author,
      'AKKA 架构源码分析',
      'One line description of project.',
